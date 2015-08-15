@@ -12,11 +12,5 @@ $(document).ready(function(){
 	  	"Login";
 	  $("h1#titleswitch").text(newTitle);
 	});
-   //  $('#goregister').click(function(){
-   //  	var text = $('#goregister').text();
-   //  	if(text == 'Need an account?')
-	  //   	text.replaceWith('Have an account?');
-	  //   else
-			// text.replaceWith('Need an account?');
-   //  });
+
 });
