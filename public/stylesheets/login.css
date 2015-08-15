@@ -100,7 +100,7 @@ html {
   background:#2C3E50;
 }
 
-#login{
+.login{
   width:400px;
   margin:0 auto;
   margin-top:250px;
@@ -121,7 +121,7 @@ html {
   margin:0 auto;
 }
 
-#login h1{
+.login h1{
   background:#22313F;
   padding:20px 0;
   font-size:140%;
@@ -160,7 +160,23 @@ input[type="submit"]{
   transition:background .3s;
   -webkit-transition:background .3s;
 }
+#padfix{
+  padding-bottom:14px;
+}
+.register-flavor{
+  margin-top:15px;
+  margin-bottom:0;
+  text-align: center;
+}
 
+
+.register-link{
+  color:black;
+  text-decoration: none;
+}
+.register-link:hover{
+  text-decoration: underline;
+}
 
 input[type="submit"]:hover{
   background:#67809F;
