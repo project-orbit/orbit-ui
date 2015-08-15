@@ -107,16 +107,63 @@ a {
   .side-nav {
     position: absolute;
     left: 0;
-    top: 0;
-    padding: 20px;
+    top: 20px;
     margin: 20px;
     color: white;
-    background: rgba(0, 0, 0, .2);
     z-index: 2;
   }
   
+  .side-nav text, .side-nav a {
+    padding: 20px;
+    background: rgba(0, 0, 0, .2);
+    display: table;
+    margin-top: 10px;
+  }
+  
+  .side-nav .current-info {
+    display: none;
+  }
+  
+  .info-text:hover {
+    background: rgba(38, 166, 91, .2) !important;
+    cursor: pointer;
+  }
+  
+  .active-tag {
+    background: rgba(38, 166, 91, .2) !important;
+    color: white !important;
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+  }
+  
+  .orbit .active-tag {
+    background: #26A65B !important;
+  }
+  
+  .device-orbit.active-tag {
+    box-shadow: 0 0 10px rgba(38, 166, 91, .3); 
+  }
   
   
+  .info-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    background: rgba(0, 0, 0, .88);
+    color: white;
+    display: none;
+    z-index: 3;
+    font-size: 36px;
+  }
+  
+    .info-modal .item-name {
+      position: relative;
+      font-size: 48px;
+      top: calc(50% - 100px);
+    }
   
   
   
