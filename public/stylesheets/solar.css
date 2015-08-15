@@ -31,6 +31,7 @@ html, body {
     
     box-shadow: 0 0 124px rgba(255, 255, 255, .24);
     background: #446CB3;
+    z-index: 999;
 }
 
 .planet {
@@ -46,6 +47,25 @@ html, body {
   box-shadow: 0 0 124px rgba(255, 255, 255, .24);
 }
 
+.device-planet {
+  height: 30px;
+  width: 30px;
+  margin: -15px 0 0 -15px;
+  border: none;
+  border-radius: 50%;
+  background: #81CFE0;
+  box-shadow: 0 0 124px rgba(255, 255, 255, .24);
+    color: #222;
+}
+
+  .device-planet text {
+    position: relative;
+    top: 3px;
+    left: 9px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
 .orbit {
   position: absolute;
   top: 50%;
@@ -60,6 +80,19 @@ html, body {
     -ms-animation: spin-right 10s linear infinite;
      -o-animation: spin-right 10s linear infinite;
         animation: spin-right 10s linear infinite;
+}
+
+.device-orbit {
+  background: #222;
+}
+
+.device-orbit:hover {
+  cursor: pointer;
+  border: 1px solid #26A65B;
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+  /*background: rgba(38, 166, 91, .06);*/
+  box-shadow: 0 0 10px rgba(38, 166, 91, .3); 
 }
 
 .planet1 {
@@ -146,6 +179,10 @@ html, body {
 .system {
   position: relative;
   top: calc(50% + 80px);
+}
+
+.admin .system {
+  top: 50%;
 }
  
 .brand-title  {
