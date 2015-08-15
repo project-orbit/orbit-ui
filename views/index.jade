@@ -2,20 +2,41 @@ extends layout
 
 block content
   body.landing
-    div.landing-nav
-      a(href="#") Log In
-      a(href="#") Sign Up
     div.section
+      div.landing-nav
+        a(href="#") Log In
+        a(href="#") Sign Up
       div.stars
         div.brand-title
           text ORBIT
           div.sub-title.
-            like, seriously, quit losing your shit
+            like, seriously, quit losing your stuff
         div.system
           div#sun
-          div#earth-orbit
-            div#earth
-            div#moon-orbit
-              div#moon
-
-
+          div.orbit.orbit1
+            div.planet.planet1
+          div.orbit.orbit2
+            div.planet.planet2
+          div.orbit.orbit3
+            div.planet.planet3
+              
+    div.content
+      div.info
+        div.left
+          i.fa.fa-frown-o
+        div.right
+          h2 THE PROBLEM
+          text You keep losing your stuff.
+      div.info
+        div.left
+          i.fa.fa-mobile
+        div.right
+          h2 THE SOLUTION
+          text Our application will notify you when you leave your stuff behind.
+      div.info
+        div.left
+          i.fa.fa-smile-o
+        div.right
+          h2 THE RESULT
+          text You stop losing your stuff.
+      

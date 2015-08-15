@@ -10,7 +10,7 @@ html, body {
     height: 100%;
     
     /* The universe is black */
-    background: #222;
+    background: #22313F;
 }
 
 #sun {
@@ -33,88 +33,86 @@ html, body {
     background: #446CB3;
 }
 
-#earth {
-    /* Style your earth */
-    position: absolute;
-    top: 0;
-    left: 50%;
-    
-    height: 50px;
-    width: 50px;
-    margin-left: -25px;
-    margin-top: -25px;
-    
-    border: none;
-    border-radius: 50%;
-    
-    background: #81CFE0;
-    box-shadow: 0 0 124px rgba(255, 255, 255, .24);
+.planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin: -25px 0 0 -25px;
+  border: none;
+  border-radius: 50%;
+  background: #81CFE0;
+  box-shadow: 0 0 124px rgba(255, 255, 255, .24);
 }
 
-#earth-orbit {
-    /* For Section #2 */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 300px;
-    height: 300px;
-    margin-top: -150px;
-    margin-left: -150px;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, .5);
-    border-radius: 50%;
-    
-    -webkit-animation: spin-right 10s linear infinite;
-     -moz-animation: spin-right 10s linear infinite;
-      -ms-animation: spin-right 10s linear infinite;
-       -o-animation: spin-right 10s linear infinite;
-          animation: spin-right 10s linear infinite;
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 280px;
+  margin: -140px 0 0 -140px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  -webkit-animation: spin-right 10s linear infinite;
+   -moz-animation: spin-right 10s linear infinite;
+    -ms-animation: spin-right 10s linear infinite;
+     -o-animation: spin-right 10s linear infinite;
+        animation: spin-right 10s linear infinite;
 }
 
-#moon {
-    /* Style your earth */
-    position: absolute;
-    top: 0;
-    left: 50%;
-    
-    height: 20px;
-    width: 20px;
-    margin-left: -25px; 
-    margin-top: -9px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    
-    box-shadow: 0 0 124px rgba(255, 255, 255, .24);
- 
-    background: #81CFE0;
+.planet1 {
+  height: 40px;
+  width: 40px;
+  margin: -20px 0 0 -20px;
 }
 
-#moon-orbit {
-    /* For Section #2 */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 100px;
-    height: 100px;
-    margin-top: -200px;
-    margin-left: -51px;
-
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, .5);
-    border-radius: 50%;
-    
-    -webkit-animation: spin-right 10s linear infinite;
-     -moz-animation: spin-right 10s linear infinite;
-      -ms-animation: spin-right 10s linear infinite;
-       -o-animation: spin-right 10s linear infinite;
-          animation: spin-right 10s linear infinite;
+.orbit1 {
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;
+  -webkit-animation: spin-right 7s linear infinite;
+   -moz-animation: spin-right 7s linear infinite;
+    -ms-animation: spin-right 7s linear infinite;
+     -o-animation: spin-right 7s linear infinite;
+        animation: spin-right 7s linear infinite;
 }
+
+.planet2 {
+  height: 30px;
+  width: 30px;
+  margin: -15px 0 0 -15px;
+}
+
+.orbit2 {
+  width: 300px;
+  height: 300px;
+  margin: -150px 0 0 -150px;
+  -webkit-animation: spin-right 12s linear infinite;
+   -moz-animation: spin-right 12s linear infinite;
+    -ms-animation: spin-right 12s linear infinite;
+     -o-animation: spin-right 12s linear infinite;
+        animation: spin-right 12s linear infinite;
+}
+
+.planet3 {
+  height: 30px;
+  width: 30px;
+  margin: -15px 0 0 -15px;
+}
+
+.orbit3 {
+  width: 480px;
+  height: 480px;
+  margin: -240px 0 0 -240px;
+  -webkit-animation: spin-right 15s linear infinite;
+   -moz-animation: spin-right 15s linear infinite;
+    -ms-animation: spin-right 15s linear infinite;
+     -o-animation: spin-right 15s linear infinite;
+        animation: spin-right 15s linear infinite;
+}
+
 
 @-webkit-keyframes spin-right {
   100% {
@@ -138,7 +136,7 @@ html, body {
 
 .stars {
   
-    background-color: #22313F;
+    background-color: #222222;
   width: 100%;
   height: 100%;
   display: block;

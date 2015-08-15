@@ -1,3 +1,5 @@
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
 html, body {
   padding: 0;
   margin: 0;
@@ -17,7 +19,7 @@ html, body {
   
 }
 
-.landing .section {
+.section {
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -36,4 +38,94 @@ html, body {
   .landing-nav a {
     float: right;
     color: white;
+    margin-left: 20px;
+    text-decoration: none;
   }
+  
+.landing .content {
+  position: absolute;
+  top: calc(100% - 60px);
+  background: #22313F;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0px 0px 0px #000, 0px -10px 10px rgba(0, 0, 0, .2);
+  background-image:
+    linear-gradient(
+      #12212F, #22313F
+    );
+}
+
+  .landing .info {
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+  }
+  
+  .info .left {
+    display: inline-block;
+    padding-left: 30%;
+    width: 10%;
+    text-align: center;
+  }
+  
+  .info .right {
+    display: inline-block;
+    width: calc(60% - 100px);
+    padding-left: 100px;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .info i {
+    font-size: 96px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+/**
+*
+* Administrative Dashboard
+*
+**/
+
+  .admin .section {
+    height: 100%;
+    top: 0;
+  }
+
+  .side-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    background: rgba(0, 0, 0, .2);
+    z-index: 2;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
