@@ -1,4 +1,5 @@
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 html, body {
   padding: 0;
@@ -123,13 +124,20 @@ a {
     height: 100%;
     top: 0;
   }
+  
+  .logo {
+    color: #919899;
+    font-size: 48px;
+  }
 
   .side-nav {
     position: absolute;
     left: 0;
-    top: 20px;
-    margin: 20px;
-    color: white;
+    top: 0;
+    height: 100%;
+    width: 240px;
+    color: #222;
+    background: white;
     z-index: 2;
   }
   
@@ -144,16 +152,83 @@ a {
     display: none;
   }
   
+  
+  .side-nav .nav-tab {
+    position: relative;
+    margin: 0;
+    width: calc(100% - 30px);
+    padding: 10px;
+    padding-left: 20px;
+  }
+  
+    .nav-tab:hover {
+      cursor: pointer;
+      border-left: 5px solid #ADDDDC;
+      padding-left: 15px;
+    }
+    
+    .active-tab {
+       border-left: 5px solid #8DBDBC;
+       padding-left: 15px !important;
+    }
+  
+    .nav-tab text {
+      margin: 0 !important;
+      display: initial !important;
+      background: none !important;
+      padding: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    
+    
+  
+  
+  .info-nav {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 240px;
+    padding: 60px;
+    padding-top: 30px;
+    color: white;
+    font-family: 'Open Sans';
+    text-shadow: 0 0 10px rgba(255, 255, 255, .2);
+  }
+  
+    .info-nav .heading {
+      font-weight: 300;
+      padding-top: 4px;
+      font-size:48px;
+    }
+    
+    .info-nav .details {
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    
+    .detail {
+      padding-top: 10px;
+    }
+    
+    .add-item {
+      color: white;
+    }
+    
+    
+  
+  
+  
   .info-text:hover {
-    background: rgba(38, 166, 91, .2) !important;
     cursor: pointer;
   }
   
   .active-tag {
-    background: rgba(38, 166, 91, .2) !important;
     color: white !important;
     -webkit-animation-play-state: paused !important;
     animation-play-state: paused !important;
+    font-weight: bold;
   }
   
   .orbit .active-tag {

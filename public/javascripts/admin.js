@@ -19,9 +19,9 @@ var item3 = {
 }
 
 var items = {
- // "1": item1,
-  //"2": item2,
-  //"3": item3,
+  "1": item1,
+  "2": item2,
+  "3": item3,
 }
 
 
@@ -102,10 +102,14 @@ function addPlanet() {
   
   var name = items[count].name;
   var sig = items[count].signal;
-  var infoText = $('<text>').text(`${count}. ${name} (${sig})`);
-  $(infoText).addClass(`info-text info-text-${count}`);
+  
+  
+  var infoText = $('<div>').text(`${count}. ${name} (${sig})`);
+  $(infoText).addClass(`info-text info-text-${count} detail`);
   $(infoText).attr('data-itemid', count);
-  $('.side-nav').append(infoText);
+  $('.details').append(infoText);
+  
+  
   
   size += 100;
   margin -= 50;
@@ -179,8 +183,8 @@ $('body').on('submit', '.add-item-form', function(e) {
   $('.add-item-form input').val('');
   $('.add-modal').hide();
   
-   $('.info-modal').show();
-   $('.info-modal .item-name').text('Waiting for device...');
+   //$('.info-modal').show();
+   //$('.info-modal .item-name').text('Waiting for device...');
   
   return false;
 });
@@ -188,7 +192,7 @@ $('body').on('submit', '.add-item-form', function(e) {
 
 // Bullshit test inits
 
-/*addPlanet();
 addPlanet();
-addPlanet();	*/
+addPlanet();
+addPlanet();
 

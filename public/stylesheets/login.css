@@ -8,6 +8,7 @@ html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
+  font-family: 'Montserrat';
 }
 
 #stars {
@@ -101,13 +102,10 @@ html {
 }
 
 .login{
+  position: absolute;
   width:400px;
-  margin:0 auto;
-  margin-top:250px;
-  margin-bottom:2%;
-  vertical-align: center;
-  top: 40%;
-  left:0%;
+  left: calc(50% - 200px);
+  top: calc(50% - 150px);
   transition:opacity 1s;
   -webkit-transition:opacity 1s;
 }
