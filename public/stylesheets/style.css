@@ -6,7 +6,14 @@ html, body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+a {
+  color: #00B7FF;
+}
 
+
+.blink {
+  text-decoration: blink;
+}
 
 
 /**
@@ -96,6 +103,22 @@ html, body {
 *
 **/
 
+  #sun {
+    text-align: center;
+  }
+
+  #sun i {
+    font-size: 59px;
+    position: relative;
+    top: 20px;
+    color: rgba(0, 0, 0, .08);
+    left: -4px;
+  }
+  
+  #sun i:hover {
+    cursor: pointer;
+  }
+
   .admin .section {
     height: 100%;
     top: 0;
@@ -142,7 +165,7 @@ html, body {
   }
   
   
-  .info-modal {
+  .info-modal, .add-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -156,10 +179,21 @@ html, body {
     font-size: 36px;
   }
   
-    .info-modal .item-name {
+    .info-modal .item-name, .add-modal form {
       position: relative;
       font-size: 48px;
       top: calc(50% - 100px);
+    }
+    
+    .add-modal input {
+      position: relative;
+      font-size: 48px;
+      top: calc(50% - 100px);
+      background: rgba(0, 0, 0, 0);
+      color: white;
+      border: 0;
+      outline: none;
+      width: 1000px;
     }
   
   

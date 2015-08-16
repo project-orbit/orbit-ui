@@ -19,9 +19,9 @@ var item3 = {
 }
 
 var items = {
-  "1": item1,
-  "2": item2,
-  "3": item3,
+ // "1": item1,
+  //"2": item2,
+  //"3": item3,
 }
 
 
@@ -36,7 +36,46 @@ var items = {
 *
 **/
 
-function addPlanet(obj) {
+function addPlanet() {
+  
+  var newOrbit = $('<div>')
+                          .addClass(`orbit device-orbit orb${count}`)
+                          .attr('data-itemid', count);
+                          
+  var newPlanet = $('<div>')
+                          .addClass('planet device-planet')
+                          .attr('data-itemid', count);
+  
+  $(newPlanet).append($('<text>').text(count));
+  
+  
+  
+  var speed = Math.floor(Math.random() * 10) + 20;
+  
+  $(newOrbit).css('animation', `spin-right ${speed}s linear infinite`)
+                   .css('margin', `${margin}px 0 0 ${margin}px`)
+                   .css('width', `${size}px`)
+                   .css('height', `${size}px`)
+                   .css('z-index', `${zindex}`);
+  
+  $(newOrbit).append(newPlanet);
+  $('.system').append(newOrbit);
+  
+  var name = items[count].name;
+  var sig = items[count].signal;
+  var infoText = $('<text>').text(`${count}. ${name} (${sig})`);
+  $(infoText).addClass(`info-text info-text-${count}`);
+  $(infoText).attr('data-itemid', count);
+  $('.side-nav').append(infoText);
+  
+  size += 100;
+  margin -= 50;
+  count += 1;
+  zindex -= 1;
+}
+
+
+function addPlanet() {
   
   var newOrbit = $('<div>')
                           .addClass(`orbit device-orbit orb${count}`)
@@ -101,6 +140,15 @@ $('body').on('mouseout', '.device-orbit, .info-text', function() {
 });
 
 
+
+$('body').on('click', '.add-item', function() {
+  $('.add-modal').show();
+  $('.add-item-form input').focus();
+});
+
+
+
+
 /**
 *  (in progress)
 *  More info + object management in pretty modal form
@@ -109,14 +157,38 @@ $('body').on('mouseout', '.device-orbit, .info-text', function() {
 
 $('body').on('click', '.device-orbit, .info-text', function() {
   var item = items[$(this).data('itemid')];
-  $('.info-modal').show();
-  $('.info-modal .item-name').text(item.name);
+  if(item) {
+    $('.info-modal').show();
+    $('.info-modal .item-name').text(item.name);
+  }
+});
+
+
+
+
+$('body').on('submit', '.add-item-form', function(e) {
+  e.preventDefault();
+  
+  items[count] = {
+    "name": $('.add-item-form input').val(),
+    "signal": "-??dB"
+  };
+  
+  addPlanet();
+  
+  $('.add-item-form input').val('');
+  $('.add-modal').hide();
+  
+   $('.info-modal').show();
+   $('.info-modal .item-name').text('Waiting for device...');
+  
+  return false;
 });
 
 
 // Bullshit test inits
 
+/*addPlanet();
 addPlanet();
-addPlanet();
-addPlanet();
+addPlanet();	*/
 
