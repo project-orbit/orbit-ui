@@ -3,26 +3,6 @@ var size = 300;
 var margin = -150;
 var zindex = 99;
 
-var item1 = {
-  "name": "Keys",
-  "signal": "-45dB"
-}
-
-var item2 = {
-  "name": "Backpack",
-  "signal": "-74dB"
-}
-
-var item3 = {
-  "name": "Laptop",
-  "signal": "-12dB"
-}
-
-var items = {
-  "1": item1,
-  "2": item2,
-  "3": item3,
-}
 
 
 
@@ -190,9 +170,42 @@ $('body').on('submit', '.add-item-form', function(e) {
 });
 
 
-// Bullshit test inits
+
+
+// Get all items
+
+var item1 = {
+  "name": "Keys",
+  "signal": "-45dB"
+}
+
+var item2 = {
+  "name": "Backpack",
+  "signal": "-74dB"
+}
+
+var item3 = {
+  "name": "Laptop",
+  "signal": "-12dB"
+}
+
+var items = {
+  "1": item1,
+  "2": item2,
+  "3": item3,
+}
+
+$.get("/api/users/explorer/devices", function(data) {
+  console.log(data);
+  
+});
 
 addPlanet();
 addPlanet();
 addPlanet();
+
+
+
+
+
 
